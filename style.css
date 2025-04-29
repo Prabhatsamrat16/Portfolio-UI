@@ -19,7 +19,7 @@
     text-decoration: none;
 }
 
-::-webkit-scrolllbar{
+::-webkit-scrollbar{
     width: 1rem;
     height: 10rem;
 }
@@ -42,7 +42,9 @@ body{
 
 .header{
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
     background-color: var(--bg-color);
     display: flex;
@@ -115,7 +117,7 @@ section{
 
 .home .content p{
     color: var(--text-color);
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     text-transform: lowercase;
     line-height: 1.5;
     width: 50rem;
@@ -133,7 +135,7 @@ section{
     padding: 1rem 2rem;
     font-size: 1.5rem;
     font-weight: 500;
-    border: 2px solid var(--main-color);
+    border: .2rem solid var(--main-color);
     border-radius: 3rem;
 }
 
@@ -147,13 +149,21 @@ section{
     background-color: var(--main-color);
     color: var(--text-color);
     border: none;
-    box-shadow: .1rem .1rem 1rem var(--main-color);
+    box-shadow: .1rem .5rem 1rem var(--main-color);
+}
+
+.home .content .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .home .content .icons i{
     color: var(--main-color);
     font-size: 2rem;
-    border: 2rem solid var(--main-color);
+    border: .2rem solid var(--main-color);
     padding: 1rem;
     border-radius: 50%;
 }
@@ -175,8 +185,8 @@ section{
 
 .home img:hover{
     box-shadow: 0 0 2.5rem var(--main-color),
-    0 0 5rem var(--main-color),
-    0 0 10rem var(--main-color);
+                0 0 5rem var(--main-color),
+                0 0 10rem var(--main-color);
 
 }
 
@@ -199,7 +209,7 @@ section{
 }
 
 .text-animation span::after{
-    content: '';
+    content: "";
     background-color: var(--bg-color);
     position: absolute;
     width: calc(100% + 8px);
@@ -216,7 +226,8 @@ section{
 }
 
 @keyframes words{
-    0%,20%{
+    0%,
+    20%{
         content: 'Frontend Developer';
     }
 
@@ -278,7 +289,9 @@ section{
     padding-top: 4rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-flow: column;
+    min-height: 100vh;
     background-color: var(--second-bg-color);
 }
 
@@ -370,9 +383,9 @@ section{
 }
 
 .services{
-    min-height: 10vh;
+    min-height: 100vh;
     background-color: var(--bg-color);
-    padding: 5rrm 5%;
+    padding: 5rem 5%;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -406,7 +419,7 @@ section{
 
 .services .box-container .box:hover{
     background-color: var(--white);
-    box-sizing: .1rem 1rem var(--main-color);
+    box-shadow: .1rem .5rem 1rem var(--main-color);
     scale: 1.1;
 }
 
