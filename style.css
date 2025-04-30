@@ -74,6 +74,11 @@ body{
     margin: 0 1rem;
 }
 
+.header .navbar a:hover{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
 .header .navbar a#Home{
     color: var(--main-color);
     text-decoration: underline;
